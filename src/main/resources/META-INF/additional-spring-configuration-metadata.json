@@ -1,0 +1,9 @@
+{
+	"properties": [
+		{
+			"name": "jgsudhakar.export-file-name",
+			"type": "java.lang.String",
+			"description": "Mention the file location , where the file should get export with file name."
+		}
+	]
+}

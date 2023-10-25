@@ -1,0 +1,52 @@
+# This application will be sample application for the Spring boot with Rabbit MQ for Queue system
+server:
+  port: 9898
+  servlet:
+    context-path: /springbatch
+
+# Data Base Properties
+spring:
+  datasource:
+    username: root
+    password: tagit
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/study?autoReconnect=true&useSSL=false
+  main:
+    banner-mode: console
+    allow-bean-definition-overriding: true
+# JPA Properties
+  jpa:
+    show-sql: true
+    open-in-view: true
+    properties:
+      release_mode: after_transaction
+      agressive_release: true
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+#       Spring Batch Configuration
+  batch:
+    job:
+#   This is to prevent job started on its own
+      enabled: false
+# To enable Table creation
+    jdbc:
+      initialize-schema: always
+
+# Flyway Properties from Parent Artifacts
+  flyway:
+      enabled: true
+      baseline-version: 0
+      table: SPRING_BATCH_SCHEMA_VERSION
+      validate-on-migrate: true
+      baseline-description: Spring Batch Base Version
+      baseline-on-migrate: true
+      
+info:
+  name: ${spring.application.name}
+  description: Spring Batch Demo Application
+  version: 1.0.0
+
+jgsudhakar:
+  exportFileName: D:/outputdata.csv 

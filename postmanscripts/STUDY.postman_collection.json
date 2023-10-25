@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "14a944a1-97e6-485c-826a-3abc0fd1ae66",
+		"name": "STUDY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SB_JOBRUN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9898/springbatch/api/student/processbatch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9898",
+					"path": [
+						"springbatch",
+						"api",
+						"student",
+						"processbatch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SB_JOBRUN_FILE_PROCESS",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9898/springbatch/api/student/processbatchtofile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9898",
+					"path": [
+						"springbatch",
+						"api",
+						"student",
+						"processbatchtofile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SB_STU_LIST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9898/springbatch/api/student/retrieve",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9898",
+					"path": [
+						"springbatch",
+						"api",
+						"student",
+						"retrieve"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
